@@ -1,16 +1,20 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import logo from "../assets/img/logo_withoutbg.png";
 const Header = () => {
   return (
     <div>
       <div className="links">
-        <Link to="/">Home</Link>
-        <Link to="/drinks">Drinks</Link>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/drinks">Drinks</NavLink>
       </div>
       <div className="logo">
-        <img src="https://png.pngtree.com/element_our/sm/20180518/sm_5afe330442a3a.jpg" alt="logo" />
+        <img src={logo} alt="logo" />
         <h1>DCI DRINKS</h1>
       </div>
+      <div className="contact">
+        <NavLink to="/contact">Contact</NavLink>
+      </div>
     </div>
-  )
-}
-export default Header
+  );
+};
+export default Header;

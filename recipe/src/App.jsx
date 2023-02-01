@@ -2,11 +2,11 @@ import Header from "./components/Header";
 import "./App.css";
 import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
-import Home from '../src/assets/pages/Home'
-import Drinks from '../src/assets/pages/Drinks'
-import SingleDrink from '../src/assets/pages/SingleDrink'
-import Contact from '../src/assets/pages/Contact'
-import Error from '../src/assets/pages/Error'
+import Home from '../src/pages/Home'
+import Drinks from '../src/pages/Drinks'
+import SingleDrink from '../src/pages/SingleDrink'
+import Contact from '../src/pages/Contact'
+import Error from '../src/pages/Error'
 
 function App() {
   return (
