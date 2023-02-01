@@ -3,7 +3,7 @@ import '../styles/home.css';
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import CocktailCardDetailed from '../components/CocktailCardDetailed';
+import CocktailCardPreview from '../components/CocktailCardPreview';
 
 
 const Home = () => {
@@ -47,7 +47,7 @@ useEffect(() => {
                     <h2>Our today's suggestion</h2>
                 </div>
 
-                <CocktailCardDetailed drink={drink}/>
+                <CocktailCardPreview drink={drink}/>
             </div>
         </div>
     );
