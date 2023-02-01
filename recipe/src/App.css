@@ -1,8 +1,8 @@
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 a{
     text-decoration: none;
@@ -10,6 +10,13 @@ a{
 }
 ul {
     list-style: none;
+}
+.App {
+    width: 80%;
+    margin: 0 auto;
+}
+.active {
+    color: lightblue;
 }
 
 /*here I will add header and footer css, later if we want we can create a special styling for that */
@@ -66,7 +73,6 @@ footer .social-links {
     display: flex;
     gap: 1rem;
 }
-
 /* here are media queries for nav responsive */
 @media screen and (max-width: 768px) {
     nav {
