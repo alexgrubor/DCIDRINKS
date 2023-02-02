@@ -16,7 +16,7 @@ ul {
     margin: 0 auto;
 }
 .active {
-    color: lightblue;
+    color: var(--Accentcolor);
 }
 
 /*here I will add header and footer css, later if we want we can create a special styling for that */
@@ -35,8 +35,13 @@ nav .links {
 }
 nav .links a, 
 nav .contact a {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     font-weight: 500;
+}
+nav .links a:hover,
+nav .contact a:hover {
+    color: var(--Textcolor);
+    border-bottom: 1px solid var(--Textcolor);
 }
 nav .logo {
     font-size: 1.2rem;
@@ -70,8 +75,18 @@ footer {
     align-items: center;
 }
 footer .social-links {
+    padding: 1rem;
     display: flex;
-    gap: 1rem;
+    gap: 1.4rem;
+    font-size: 3rem;
+}
+footer p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+footer .social-links a:hover {
+    color: var(--Textcolor);
 }
 /* here are media queries for nav responsive */
 @media screen and (max-width: 768px) {
@@ -86,17 +101,27 @@ footer .social-links {
     }
     nav button {
         display: block;
-        font-size: 1.5rem;
+        font-size: 2rem;
         background: transparent;
         border: none;
         cursor: pointer;
+        padding: 1rem;
+        position: absolute;
+        top: 13px;
+        right: 0;
     }
     .hamburger-menu {
         position: absolute ;
-        top:53px;
-        right: 20px;
+        background-color:#fff;
+        top:60px;
+        right: 0px;
         display: flex;
         flex-direction: column;
-    }
+      font-size: 2rem;
+        gap: 1rem;
+        padding: 1rem;
 }
-
+.hamburger-menu a:hover {
+    color: var(--Accentcolor);
+     
+} }
