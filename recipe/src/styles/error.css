@@ -1,0 +1,19 @@
+.error {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 3rem;
+    text-align: center;
+    background-color: var(--colorsfrompallete1);
+    color: var(--colorsfrompallete2);
+    font-family: var(--font);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+.error img {
+    width: 100%;
+    max-width: 300px;
+}

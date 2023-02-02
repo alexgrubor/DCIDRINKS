@@ -1,0 +1,9 @@
+:root {
+  --Backgroundcolor: #b3b9b0;
+  --Textcolor: #593836;
+  --Accentcolor: #a65228;
+  --colorsfrompallete1: #4c444c;
+  --colorsfrompallete2: #afa493;
+  /*font */
+  --font: 'Roboto', sans-serif;
+}
