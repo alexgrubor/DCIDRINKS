@@ -6,6 +6,7 @@ import '../styles/randomdrink.css'
 function CocktailCardPreview(props) {
   const drink = props.drink;
 
+
   return (
     drink && (
       <div className="random-drink">
@@ -37,6 +38,9 @@ function CocktailCardPreview(props) {
       </div>
     )
   );
+
+   
+
 }
 
 export default CocktailCardPreview;
