@@ -33,7 +33,7 @@ form {
   object-fit: cover;
   border-radius: 10px;
 }
-.top10 {
+.top5 {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
@@ -63,7 +63,7 @@ form {
   .drink {
     width: 45%;
   }
-  .top10 {
+  .top5 {
     width: 90%;
   }
   .top-drink {

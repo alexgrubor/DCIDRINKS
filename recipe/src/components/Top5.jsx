@@ -15,7 +15,7 @@ const Top5 = ({ url }) => {
 
   return (
     <div>
-      <div className="top10">
+      <div className="top5">
         {drinks.slice(0, 5).map((drink) => {
           return (
             <div className="top-drink" key={drink.idDrink}>
