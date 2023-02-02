@@ -97,6 +97,8 @@ align-items: flex-start;
     margin: 1rem 0;
     padding: 0;
     text-align: center;
+    max-width: 30ch;
+    
 }
  .drinks-page .results {
     display: flex;
@@ -152,12 +154,14 @@ align-items: flex-start;
     display: flex;
     flex-direction: column;
     width: 24%;
-    padding: 1rem;
+    padding: 2rem 0.4rem;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
+    font-size: 2rem;
     background-color: var(--colorsfrompallete2);
     color: var(--colorsfrompallete1);
+
+    
 }
 .top-drink img {
     width: 100%;
@@ -168,7 +172,7 @@ align-items: flex-start;
     font-size: 1.2rem;
     font-weight: 500;
     margin: 0.4rem 0;
-    padding: 0;
+    padding: 1rem;
     text-align: center;
 
 }
@@ -187,9 +191,11 @@ align-items: flex-start;
         flex-wrap: wrap;
         justify-content: center;
         gap: 2rem;
+        
     }
     .drinks-page .results .drink {
         width: 45%;
+      
 
     }
     .drinks-page .results .drink img {
@@ -200,6 +206,8 @@ align-items: flex-start;
     }
     .top-drink {
         width: 45%;
+        padding: 1rem 0;
+        
     }
     .top-drink img {
         height: 78%;
@@ -207,11 +215,10 @@ align-items: flex-start;
     .top-drink h3 {
         font-size: 1rem;
         font-weight: 500;
-        margin: 0.4rem 0;
+        margin: 1rem 0;
         padding: 0;
         text-align: center;
     }
-
 
 }
 
