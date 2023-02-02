@@ -25,7 +25,9 @@ function CocktailCardPreview(props) {
 
                 <div className="single-drink-content">
                     <div className="single-drink-img">
+                    <Link to={`/drinks/${drink.idDrink}`}>
                         <img src={drink.strDrinkThumb} alt={drink.strDrink} />
+                    </Link>
                     </div>
                     <div className="single-drink-details">
                     <Link to={`/drinks/${drink.idDrink}`}>Read more!</Link>
