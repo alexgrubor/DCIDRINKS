@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "../styles/drinks.css";
-import Top10NonAlc from "../components/Top10NonAlc";
+import Top5 from "../components/Top5";
 const Drinks = () => {
   const [drinks, setDrinks] = useState([]);
   const [isClicked, setIsClicked] = useState(false);
@@ -40,8 +40,9 @@ const Drinks = () => {
   return (
     <div>
       <h1>Drinks</h1>
-      <div>
+      <div className="cocktail-finder">
         <h4>Cocktail Finder</h4>
+        <p>WHAT KIND OF COCKTAIL ARE YOU LOOKING FOR?</p>
 
         <form
           onSubmit={(e) => {
@@ -49,30 +50,28 @@ const Drinks = () => {
           }}
           className="search-by-name"
         >
-          <input
-            type="text"
-            placeholder="Search by name"
-            onChange={onSearchNameHandler}
-          />
-          <button type="submit" onClick={searchByNameHandler}>
-            Search
-          </button>
-        </form>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-          }}
-          className="search-by-ingredient"
-        >
-          <input
-            type="text"
-            placeholder="Search by ingredient"
-            onChange={onSearchIngHandler}
-          />
-          <button type="submit" onClick={onSearchHandlerByIng}>
+          <div>
             {" "}
-            Search
-          </button>
+            <input
+              type="text"
+              placeholder="Search by name"
+              onChange={onSearchNameHandler}
+            />
+            <button type="submit" onClick={searchByNameHandler}>
+              Search
+            </button>
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Search by ingredient"
+              onChange={onSearchIngHandler}
+            />
+            <button type="submit" onClick={onSearchHandlerByIng}>
+              {" "}
+              Search
+            </button>
+          </div>
         </form>
       </div>
       <div className="results">
@@ -91,8 +90,12 @@ const Drinks = () => {
           })}
       </div>
       <div className="top-10nonalc">
-        <h4>Top 10 Non-Alcoholic Drinks</h4>
-        <Top10NonAlc />
+        <h3>Top 5 Non-Alcoholic Drinks</h3>
+        <Top5 url="https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic" />
+      </div>
+      <div className="top-10alc">
+        <h3>Top 5 Alcoholic Drinks</h3>
+        <Top5 url="https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic" />
       </div>
     </div>
   );
