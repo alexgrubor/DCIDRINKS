@@ -10,6 +10,7 @@ const SingleDrink = () => {
   const navigate = useNavigate();
   const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
   const [drink, setDrink] = useState(null);
+
   useEffect(() => {
     axios
       .get(url)
@@ -20,25 +21,31 @@ const SingleDrink = () => {
           res.data.drinks.length === 0
         ) {
           navigate("/error");
+        } else if (res.data ) {
+          setDrink(res.data.drinks[0]);
         }
-
-        setDrink(res.data.drinks[0]);
+        
       })
       .catch((err) => console.log(err));
-  }, [drink]);
+      window.scrollTo(0, 0);
+  },[id]);
+
+
 
   return (
     <>
       <CocktailCardDetailed drink={drink} />
-      
      <div className="similarsuggestions">
       <h2>Similar suggestions</h2>
-       {drink && drink.strAlcoholic === "Alcoholic" ? (
+       {drink !== null && drink.strAlcoholic !== "Non alcoholic" ? (
+        <>
         <Top5
           url="https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic"
           until={8}
           start={6}
         />
+        </>
+        
       ) : (
         <Top5
           url="https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic"
