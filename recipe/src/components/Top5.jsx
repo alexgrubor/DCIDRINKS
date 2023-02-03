@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const Top5 = ({ url }) => {
+const Top5 = ({ url, start, until }) => {
   const [drinks, setDrinks] = useState([]);
   useEffect(() => {
     axios
@@ -16,7 +16,7 @@ const Top5 = ({ url }) => {
   return (
     <div>
       <div className="top5">
-        {drinks.slice(0, 5).map((drink) => {
+        {drinks.slice(start, until).map((drink) => {
           return (
             <div className="top-drink" key={drink.idDrink}>
               <Link to={`/drinks/${drink.idDrink}`}>

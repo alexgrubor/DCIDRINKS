@@ -40,6 +40,7 @@ const Drinks = () => {
       .catch((err) => console.log(err));
       setIngQuery('')
   };
+  console.log(drinks);
 
   return (
     <div className="drinks-page">
@@ -103,11 +104,15 @@ const Drinks = () => {
      {isClicked &&
           drinks !== null &&
           drinks !== undefined &&<h3> Search Results</h3> }
+     {
+        isClicked && drinks === undefined && <h3> Results Not found</h3>
+     }
+      
       <div className="results">
         {isClicked &&
           drinks !== null &&
           drinks !== undefined &&
-          drinks.map((drink) => {
+          drinks.slice(0,16).map((drink) => {
             return (
               <div className="drink" key={drink.idDrink}>
                 <Link to={`/drinks/${drink.idDrink}`}>
@@ -118,13 +123,13 @@ const Drinks = () => {
             );
           })}
       </div>
-      <div className="top-5nonalc" id="top5-non">
+      <div className="top-5nonalc" id="top5-non" >
         <h3>Top 5 Non-Alcoholic Drinks</h3>
-        <Top5 url="https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic" />
+        <Top5 start={0} until={5} url="https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic" />
       </div>
       <div className="top-5alc" id="top5">
         <h3>Top 5 Alcoholic Drinks</h3>
-        <Top5 url="https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic" />
+        <Top5 start={0} until={5} url="https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic" />
       </div>
     </div>
   );

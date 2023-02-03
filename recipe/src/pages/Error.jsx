@@ -1,4 +1,5 @@
 import '../styles/error.css'
+import Top5 from '../components/Top5';
 const Error = () => {
   return (
     <div className="error">
@@ -8,6 +9,7 @@ const Error = () => {
           There’s no problem a cocktail can’t solve, but you missed the page, so use our navigation to navigate back to our cocktail world.
         </h3>
       </div>
+
     </div>
   )
 }

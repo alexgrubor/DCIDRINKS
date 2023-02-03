@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "../styles/singledrink.css";
 import CocktailCardDetailed from "../components/CocktailCardDetailed";
-
+import Top5 from "../components/Top5";
 
 const SingleDrink = () => {
   const { id } = useParams();
@@ -25,15 +25,30 @@ const SingleDrink = () => {
         setDrink(res.data.drinks[0]);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [drink]);
 
-
-
-
-  return (<> 
-          <CocktailCardDetailed drink={drink}/>
-          </>
-    )
-
+  return (
+    <>
+      <CocktailCardDetailed drink={drink} />
+      
+     <div className="similarsuggestions">
+      <h2>Similar suggestions</h2>
+       {drink && drink.strAlcoholic === "Alcoholic" ? (
+        <Top5
+          url="https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic"
+          until={8}
+          start={6}
+        />
+      ) : (
+        <Top5
+          url="https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic"
+          until={8}
+          start={6}
+        />
+      )}
+      </div>
+    </>
+    
+  );
 };
 export default SingleDrink;

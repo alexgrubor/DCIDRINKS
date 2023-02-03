@@ -26,6 +26,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: var(--colorsfrompallete2);
 }
 nav .links {
     display: flex;
@@ -38,6 +39,7 @@ nav .contact a {
     font-size: 1.7rem;
     font-weight: 500;
 }
+
 nav .links a:hover,
 nav .contact a:hover {
     color: var(--Textcolor);
@@ -64,6 +66,21 @@ nav .contact {
 }
 nav button {
     display: none;
+}
+.theme-toggler {
+    display:flex;
+    position: fixed;
+    top: 10px;
+    left: 12vw;
+    font-size: 1rem;
+    background: var(--colorsfrompallete1);
+    border: none;
+    padding: 0.3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+
 }
 /*footer*/
 footer {
@@ -109,6 +126,9 @@ footer .social-links a:hover {
         position: absolute;
         top: 13px;
         right: 0;
+    }
+    .theme-toggler {
+        left: 2vw;
     }
     .hamburger-menu {
         position: absolute ;

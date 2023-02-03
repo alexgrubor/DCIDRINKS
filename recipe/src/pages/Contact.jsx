@@ -3,7 +3,6 @@ import { useState } from 'react';
 
 const Contact = () => {
     const [ifEmpty, setEmpty] = useState(false);
-
     const [inputData, setInputData] = useState({
         name: '',
         email: '',
@@ -18,8 +17,6 @@ const Contact = () => {
             inputData.subject !== ''
         ) {
             setEmpty(true);
-
-            console.log('i am here');
         } else {
          
             setEmpty(false);
@@ -81,6 +78,7 @@ const Contact = () => {
                     ) : null}
                 </div>
             </div>
+            
         </div>
     );
 };
