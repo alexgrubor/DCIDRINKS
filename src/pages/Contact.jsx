@@ -43,7 +43,6 @@ const Contact = () => {
 
                 </p>
                 <p>Address: Vulkanstraße 1, Berlin, DE 10367 </p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9710.141733077719!2d13.486212!3d52.523746!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x700b4ec74a47a34d!2sDCI%20Digital%20Career%20Institute!5e0!3m2!1sen!2sde!4v1675668282898!5m2!1sen!2sde"></iframe>
             </div>
             <div className="contact-form transparent-bg">
                 <form onSubmit={onSubmitHandler}>

@@ -129,11 +129,14 @@ footer .social-links a:hover {
     }
     .theme-toggler {
         left: 2vw;
+        width: 30px;
+
+
     }
     .hamburger-menu {
         position: absolute ;
         background-color:#fff;
-        top:60px;
+        top:80px;
         right: 0px;
         display: flex;
         flex-direction: column;
