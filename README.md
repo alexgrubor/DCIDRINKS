@@ -21,4 +21,4 @@ Create a new branch for your changes.
 Make your changes and commit them to your branch.
 Submit a pull request to the main branch.
 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License.
