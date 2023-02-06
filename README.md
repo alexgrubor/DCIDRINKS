@@ -1,5 +1,4 @@
-
-#DCIDRINKS
+DCI DRINKS
 This project contains a collection of drink recipes.
 
 Getting Started
