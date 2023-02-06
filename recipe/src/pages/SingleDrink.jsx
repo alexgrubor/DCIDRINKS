@@ -6,6 +6,8 @@ import CocktailCardDetailed from "../components/CocktailCardDetailed";
 import Top5 from "../components/Top5";
 
 const SingleDrink = () => {
+  const start = Math.floor(Math.random() * (10 - 6 + 1) + 6)
+  const until = Math.floor(Math.random() * (15 - 10 + 1) + 10)
   const { id } = useParams();
   const navigate = useNavigate();
   const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
@@ -41,16 +43,16 @@ const SingleDrink = () => {
         <>
         <Top5
           url="https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic"
-          until={8}
-          start={6}
+          until={until}
+          start={start}
         />
         </>
         
       ) : (
         <Top5
           url="https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic"
-          until={8}
-          start={6}
+          until={until}
+          start={start}
         />
       )}
       </div>

@@ -40,7 +40,7 @@ const Drinks = () => {
       .catch((err) => console.log(err));
       setIngQuery('')
   };
-  console.log(drinks);
+ 
 
   return (
     <div className="drinks-page">
@@ -80,6 +80,7 @@ const Drinks = () => {
               placeholder="Search by name"
               onChange={onSearchNameHandler}
               value={query}
+              required
             />
             <button type="submit" onClick={searchByNameHandler}>
               Search
@@ -93,6 +94,7 @@ const Drinks = () => {
               placeholder="Search by ingredient"
               onChange={onSearchIngHandler}
               value={ingQuery}
+              required
             />
             <button type="submit" onClick={onSearchHandlerByIng}>
               {" "}
