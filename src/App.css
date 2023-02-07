@@ -72,7 +72,7 @@ nav button {
     position: fixed;
     top: 10px;
     left: 12vw;
-    width: 50px;
+
     font-size: 1rem;
     background: var(--colorsfrompallete1);
     border: none;
